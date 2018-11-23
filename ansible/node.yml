@@ -1,0 +1,38 @@
+---
+- name: install nodejs
+   hosts: all
+   gather_facts: True
+   sudo: True
+   tasks:
+     - name: add apt key for nodesource
+      apt_key: url=https://deb.nodesource.com/gpgkey/nodesource.gpg.key
+     - name:
+
+    - name: add repo for nodesource
+      apt_repository:
+            repo: 'deb https://deb.nodesource.com/setup_8.x {{ ansible_distribution_release }} main'
+            update_cache: yes
+
+    - name: install nodejs
+      apt: name=nodejs
+ubuntu@MSR-test-Instance-1:~$ ls
+dockercompose  docker.retry  docker.yml  playbook.yml
+ubuntu@MSR-test-Instance-1:~$ cat playbook.yml
+---
+- name: install nodejs
+   hosts: all
+   gather_facts: True
+   sudo: True
+   tasks:
+     - name: add apt key for nodesource
+      apt_key: url=https://deb.nodesource.com/gpgkey/nodesource.gpg.key
+     - name:
+
+    - name: add repo for nodesource
+      apt_repository:
+            repo: 'deb https://deb.nodesource.com/setup_8.x {{ ansible_distribution_release }} main'
+            update_cache: yes
+
+    - name: install nodejs
+      apt: name=nodejs
+

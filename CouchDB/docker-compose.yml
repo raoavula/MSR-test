@@ -1,0 +1,6 @@
+version: '3'
+services:
+  db:
+     image: CouchDB
+     container_name: CouchDB
+     restart: always
